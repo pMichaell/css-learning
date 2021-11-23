@@ -14,8 +14,21 @@ a {
     margin: 10px;
 }
 
+a.active:hover {
+    text-decoration: underline;
+}
+
+a:not(.active) {
+ color: blue;
+}
+
+
 .main-section {
     height: 800px;
     border: 1px solid #ccc;
     padding: 16px;
+}
+
+.highlighted {
+    border: #fa923f solid 5px;
 }
