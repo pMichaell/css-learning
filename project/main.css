@@ -22,7 +22,6 @@ any h1 one tag in section with id="product overview", h1 tag does not have to be
 
 .section-title {
     color: #2ddf5c;
-    font-family: inherit;
     text-align: center;
 }
 
@@ -32,6 +31,11 @@ any h1 one tag in section with id="product overview", h1 tag does not have to be
     font-size: x-large;
 }*/
 
+.plan__list {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
 
 
 .plan {
