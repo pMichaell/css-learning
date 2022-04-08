@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: black;
+}
+
+nav {
+  margin: 30px;
+  background-color: #f9ed69;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=demo.css.map */

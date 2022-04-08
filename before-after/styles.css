@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem
+}
+
+p::before {
+    content: 'hello';
+    background: red;
+    color:white;
+    font-size: 20px;
+    display: block;
+}
+
+p::after{
+    content: 'goodbye';
+    background: red;
+    display: block;
+    color:white;
+    font-size: 20px;
+}

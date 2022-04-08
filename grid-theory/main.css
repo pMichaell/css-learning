@@ -1,0 +1,48 @@
+.container {
+    margin: 20px;
+    display: grid;
+    height: 500px;
+    /*grid-template-columns: 200px 5rem 20% auto;*/
+    grid-template-columns: [hd-start] repeat(4, 1fr) [hd-end];
+    /*grid-template-rows: 5rem auto;*/
+    grid-template-rows: [hd-start] 5rem [hd-end] 1fr 1fr ;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    grid-template-areas: "header header header header"
+                         ". . main main"
+                        "footer footer footer footer";
+}
+
+.el1 {
+    background: rgba(255, 154, 72, 0.5);
+}
+
+.el2 {
+    background: rgba(255, 0, 0, 0.5);
+    /*grid-column-start: 1;
+    !*
+    go to the end of the columns with -1
+     *!
+    grid-column-end: -1;
+
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    grid-row-end: span;
+    grid-row: 2 / span;*/
+
+    grid-area: main;
+    z-index: 10;
+}
+
+.el3 {
+    background: rgba(0, 128, 0, 0.5);
+    /*grid-column-start: 2;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: 3;*/
+    grid-area: hd;
+}
+
+.el4 {
+    background: rgba(0, 4, 255, 0.5);
+}
