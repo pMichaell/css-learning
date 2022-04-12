@@ -1,0 +1,135 @@
+html {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-auto-rows: auto;
+    row-gap: 50px;
+    background-color: rgba(0, 0, 0, .25);
+    padding-inline: clamp(1rem, 15vw, 3rem);
+}
+
+.firstContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, 600px);
+    background: #2ddf5c;
+}
+
+.firstContainer > div {
+    border: 2px solid white;
+}
+
+.firstContainer div:nth-child(1n) {
+    height: 200px;
+}
+
+.firstContainer div:nth-child(2n) {
+    height: 300px;
+}
+
+.firstContainer div:nth-child(3n) {
+    height: 400px;
+}
+
+.firstContainer div:nth-child(4n) {
+    height: 600px;
+}
+
+.firstContainer div:nth-child(5n) {
+    /*this does not fit since row can be max 600px tall*/
+    height: 700px;
+}
+
+
+/* grid cells positioning */
+.secondContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 3px;
+}
+
+.secondContainer > div {
+    border: 3px solid #faacac;
+    background: #2C9DD4;
+    color: white;
+    height: 100%;
+    display: grid;
+    place-items: center;
+
+}
+
+.secondContainer div:nth-child(1n) {
+    grid-column: 1 / 5;
+}
+
+.secondContainer div:nth-child(2n) {
+    grid-column: 1 / 2;
+}
+
+.secondContainer div:nth-child(3n) {
+    grid-column: 2 / 3;
+}
+
+.secondContainer div:nth-child(4n) {
+    grid-column: 3 / 5;
+}
+
+
+/*nesting grids*/
+.thirdContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+}
+
+.thirdContainer > div {
+    border: #ff1b68 1px solid;
+    background-color: #8BD7D2;
+}
+
+.firstGridContainerChild {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: min(50px, 10%);
+    grid-template-rows: auto;
+    border: 1px green solid;
+}
+
+.firstGridContainerChild > div {
+    background: #ff5454;
+    border: 2px white solid;
+}
+
+/*using z-index to control overlapping of grid items*/
+.fourthContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    height: 400px;
+}
+
+.fourthContainer > div {
+    background: orange;
+    border: 2px solid aliceblue;
+}
+
+.fourthContainer > .box1 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    z-index: 5;
+}
+
+.fourthContainer > .box2 {
+    grid-row: 2;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+}
