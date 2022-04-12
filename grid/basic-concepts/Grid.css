@@ -133,3 +133,36 @@ body {
     align-items: center;
     font-size: 30px;
 }
+
+/* flexbox vs grid in multidimensional layout */
+
+.fifthContainer {
+    display: grid;
+    place-items: center;
+    row-gap: 10px;
+}
+
+.fifthContainer > .flexExample {
+    display: flex;
+    width: 500px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+
+.flexExample > div {
+    display: grid;
+    place-items: center;
+    border: 1px solid blueviolet;
+    flex: 1 1 150px
+}
+
+.fifthContainer > .gridExample {
+    display: grid;
+    width: 500px;
+    height: 200px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gridExample > div {
+    border: #ff5454 1px solid;
+}
