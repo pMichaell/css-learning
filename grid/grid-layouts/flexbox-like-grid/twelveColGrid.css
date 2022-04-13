@@ -1,0 +1,17 @@
+
+
+body {
+    background: pink;
+}
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 1rem;
+}
+
+.gridLayout > div {
+    background: gray;
+    border: 2px solid blue;
+}

@@ -1,0 +1,36 @@
+body {
+    background: #ff5454;
+}
+
+.photosGrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 240px;
+}
+
+.photosGrid > div {
+    border: 1px solid white;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    color: magenta;
+    font-size: 30px;
+}
+
+
+@media (min-width: 600px) {
+    .cardTall {
+        grid-row: span 2 / auto;
+    }
+
+    .cardWide {
+        grid-column: span 2 / auto;
+    }
+}
+/*span 2 tells grid cell to span 2 rows */
