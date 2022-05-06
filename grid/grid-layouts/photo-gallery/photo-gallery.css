@@ -29,8 +29,8 @@ body {
         grid-row: span 2 / auto;
     }
 
+    /*span 2 tells grid cell to span 2 rows */
     .cardWide {
         grid-column: span 2 / auto;
     }
 }
-/*span 2 tells grid cell to span 2 rows */
